@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huellitas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors:{
+                        fondo:      '#F5FAF8',
+                        oscuro:     '#173F3A',
+                        texto:      '#52615E',
+                        verde:      '#35A77C',
+                        verdeClaro: '#DDF3EA',
+                        naranja:    '#F2A65A',
+                        linea:      '#D9E8E3'
+                    },
+
+                    fontFamily:{
+
+                        titulo: ['Nunito', 'sans-serif'],
+                        cuerpo: ['DM Sans','sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-cuerpo text-oscuro bg-fondo">
+    <header class="sticky top-0 z-10 bg-fondo border-b border-line">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex item-center justify-between">
+            <a href="#" class="font-titulo text-2xl font-extrabold">
+                Huella <span class="text-verde">Vet 🐾</span>
+            </a>
+            <nav class="hidden md:flex">
+                <ul class="flex gap-7">
+                    <li>
+                        <a href="" class="text-texto hover:text-verde font-medium text-sm capitalize">inicio</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-texto hover:text-verde font-medium text-sm capitalize">servicios</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-texto hover:text-verde font-medium text-sm capitalize">nosotros</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-texto hover:text-verde font-medium text-sm capitalize">contacto</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button id="boton-menu" class="md:hidden text-lg">
+                🍔 menu
+            </button>
+        </div>
+
+        <div id="menu-movil" class=" px-6 pb-5  hidden md:hidden">
+            <ul class="flex flex-col gap-2">
+                <li>
+                    <a href="#" class="block py-2 text-texto hover:text-verde">Inicio</a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 text-texto hover:text-verde">Servicios</a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 text-texto hover:text-verde">Nosotros</a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 text-texto hover:text-verde">Contacto</a>
+                </li>
+            </ul>
+
+        </div>
+
+    </header>
+    <main>
+        <section id="inicio" class="py-16 md:py-24">
+           <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+                <div>
+                    <p class="text-verde font-semibold text-sm mb-3">Clinica veterinaria en Pereira</p>
+                    <h1 class="font-titulo font-extrabold text-4xl md:text-6xl leading-tight">Cuidamos a quienes llenan tu vida de huellas</h1>
+                    <p class="text-texto text-lg mt-5 mb-8 max-w-xl">
+                        Atención veterinaria 24/7 cercana y profesional para perros, gatos,loros, iguanas o especies domesticas. Consulta, vacunacion, prevención y acompañamiento.
+                    </p>
+
+                    <div class="flex gap-4 flex-wrap">
+                        <a href="" class="bg-verde text-white font-semibold px-6 py-3 rounded-lg hover:bg-oscuro">Agendar una cita</a>
+                        <a href="" class="border border-line text-oscuro font-semibold px-6 py-3 rounded-lg hover:border-verde">Conocer servicios</a>
+                    </div>
+
+                </div>
+
+                <div class="bg-verdeClaro rounded-3xl overflow-hidden">
+                    <img src="https://placehold.co/700x550/DDF3EA/173F3A?text=Mascota+Veterinaria" alt="">
+                </div>
+
+           </div>
+                
+        </section>
+
+
+        <section id="servicios">
+
+
+
+        </section>
+
+        <section id="nosotros">
+
+        </section>
+        <section id="contacto">
+
+        </section>
+    </main>
+    <footer>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </footer>
+
+    <script>
+        const botonMenu = document.getElementById("boton-menu");
+        const menuMovil = document.getElementById("menu-movil");
+
+        botonMenu.addEventListener("click", function(){
+            menuMovil.classList.toggle("hidden");
+
+            const abierto = !menuMovil.classList.contains("hidden");
+
+            botonMenu.textContent = abierto ? "🍟 Cerrar" : "🍔 menu";
+        });
+    </script>
+</body>
+</html>
